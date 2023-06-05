@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İLAN FORMU</title>
+    <script>
+        var secim = document.getElementById('secim');
+var kaydiranButon = document.getElementById('kaydiran-buton');
+
+secim.addEventListener('change', function() {
+  if (secim.checked) {
+    kaydiranButon.classList.add('clicked');
+  } else {
+    kaydiranButon.classList.remove('clicked');
+  }
+});
+function resimYukle(event) {
+      var dosya = event.target.files[0];
+      var resim = document.getElementById("gosterilenResim");
+
+      resim.style.display = "block";
+
+      var okuyucu = new FileReader();
+      okuyucu.onload = function(e) {
+        resim.src = e.target.result;
+      };
+
+      okuyucu.readAsDataURL(dosya);
+    }
+    </script>
+    <style>
+
+        body {
+            padding-top: 10px;
+            background-color: #fff;
+        }
+        .menü{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #ilan-formu {
+			width: 200px;
+			margin: 0 auto;
+			padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+		}
+        .input {
+            width: 100%;
+            max-width: 700px;
+            padding: 2px;
+            margin: auto;
+        }
+        #ilan-formu h5 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+        #ilan-formu select {
+			width: 95%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+			background-color: #e8e8e8;
+		}
+        .d-grid {
+            width: 100%;
+            max-width: 700px;
+            padding: 20px;
+            margin: auto;
+        }
+        .resim-alani {
+            float: left;
+            width: 30%;
+            margin-right: 10%;
+            text-align: center;
+            padding: 60px;
+
+        }
+        #resim-onizleme {
+            max-width: 100%;
+            max-height: 500px;
+            margin-top: 50px;
+        }
+        .discerceve1{
+        max-width: 920px;
+        margin:auto;
+    }
+    .baslik{
+        align-items: center;
+        display: flex;
+        margin-top: 30px;
+        padding-bottom: 20px;
+        border-bottom:1px solid #ccc;
+
+    }
+    .profilfoto img{
+        margin-left: 20px;
+        clip-path: circle(50% at 50% 50%);
+    }
+    .bio {
+        margin-left: 100px;
+    }
+    .biobaslik{
+        align-items: center;
+        font-size:20px;
+        display: flex;
+    }
+    .takipliste{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display:flex;
+    }
+    .takipliste a{
+        margin-right: 40px;
+        color:black;
+        text-decoration: none;
+    }
+    .yildiz{
+        color: gold;
+    }
+    .profilbtn{
+        height: 40px;
+        color: #000000;
+        background-color:#ffffff;
+        border-radius: 15px;
+        border-color:#000000;
+    }
+    .profilbtn :active {
+        color: #ffffff;
+        background-color: #EA6564;
+
+    }
+    #kaydiran-buton {
+  position: absolute;
+  top: 0;
+  right: -40px; 
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  transition: right 0.3s ease-in-out; 
+    }
+#kaydiran-buton.clicked {
+  right: 0; 
+}
+
+#secim:checked ~ #kaydiran-buton {
+  right: 0; 
+}
+
+    </style>
+</head>
+<body>
+    <body>
+        <div class="discerceve1">
+            <div class="baslik">
+                <div class="logo">  <a href="index.html">
+                    <img src="img/logo.png" alt="SecondRead Logo">
+                </a>
+                </div>
+                <div class="profilfoto"> 
+                    <a href="profıle.html">  <img src="img2/profilePhoto.png" alt="Profil Fotoğrafı"></a>
+                </div>
+                <div class="bio">
+                    <div class="yildiz">
+                        <br>&#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                    <div class="biobaslik">
+                        Ayşe LİNA 
+                    </div>
+                    <div class="takipliste">
+                        <a href="#"><b> 777 </b> Takipçi</a>
+                        <a href="#"><b> 100 </b> Takip  </a>
+                        <a href="#"><b> 100 </b> İlanlar</a>
+                    </div>
+                    <div class="profilbtn">
+                        <button class="profilbtn">Profili Düzenle</button>
+                        <button class="profilbtn">Profili Paylaş</button>
+                       <a href="adForm.html"> <button class="profilbtn">Ürün Ekle</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="menü">
+            <div class="resim-alani">
+                <input type="file" id="resimYukle" accept="image/*" onchange="resimYukle(event)">
+                <img id="gosterilenResim" src="#" alt="Seçilen Resim" style="display: none; max-width: 100%; max-height: 300px;">
+            </div>
+            <div id="ilan-formu">
+            <form action="ilan_olustur.php" method="post" enctype="multipart/form-data">
+                <div class="h">
+                    <h5>Kitap Kodu</h5>
+                </div>
+                <div class="input">
+                    <input type="text" id="kitap_kodu" name="kitap_kodu" placeholder="Kitap Kodu"><br>
+                </div>
+                <div class="h">
+                    <h5>Kitap Adı</h5>
+                </div>
+                <div class="input">
+                    <input type="text" id="kitap_adi" name="kitap_adi" placeholder="Kitap Adı"><br> 
+                </div>
+                <div class="h">
+                    <h5>Yazar</h5>
+                </div>
+                <div class="input">
+                    <input type="text" id="kitap_yazar" name="kitap_yazar" placeholder="Yazar"><br> 
+                </div>
+                <div class="h">
+                    <h5>Yayınevi</h5>
+                </div>
+                <div class="input">
+                    <input type="text" id="yayinevi" name="yayinevi" placeholder="Yayınevi"><br>
+                </div>
+                <div class="h">
+                    <h5>Kategori</h5>
+                </div>
+                <div class="input">
+                    <select name="kategori" id="kategori">
+                        <option value="roman">Roman</option>
+                        <option value="kurgu">Kurgu</option>
+                        <option value="tarih">Tarih</option>
+                        <option value="bilim">Bilim</option>
+                        <option value="bilim">Biyografi</option>
+                        <option value="bilim">Çocuk</option>
+                    </select><br><br>
+                </div>
+                <div class="h">
+                    <h5>Kitap Fiyatı</h5>
+                </div>
+                <div class="input">
+                    <input type="number" name="kitap_fiyati" id="kitap_fiyati" required placeholder="Kitap Fiyatı"><br><br>
+                </div>
+                <div class="h">
+                    <h5>Takas İstiyor Musunuz?</h5>
+                </div>
+                <div class="takas">
+                    <label for="secim">Evet</label>
+                    <input type="radio" id="secim" name="secenek" value="evet">
+                    <button id="kaydiran-buton">+</button>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary" type="button" style="background-color: #ec3f3f; color: white; text-align: center;  border-color: #EA6564;border-radius: 15px ">
+                        <h5>Ürün Ekle</h5>
+                    </button>
+                </div>
+            </form>
+            </div> 
+       </div>   
+       <footer>
+        <div class="container">
+
+            <div class="col-md-6">
+                <p>SecondRead, ikinci el kitap satışı yapan bir e-ticaret sitesidir. Amacımız, okuyuculara uygun
+                    fiyata kaliteli kitaplar sunmaktır.</p>
+                <p>İletişim: info@secondread.com</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+    </body>
+</body>
+</html>

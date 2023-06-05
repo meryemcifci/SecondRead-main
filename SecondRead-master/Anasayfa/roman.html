@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Roman</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+.kitaplar{
+    margin-top: 20px;
+    margin-left: 100px;
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+.btnkitap{
+    width: 150px;
+    height: 30px;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+
+            <div class="row">
+                <div class="logo">  <a href="index.html">
+                    <img src="img/logo.png" alt="SecondRead Logo">
+                </a>
+                </div>
+                <div class="arama">
+                    <form>
+                        <input type="text" placeholder="Kitap /Yazar /Yayınevi Ara...">
+                        <button type="submit" class="search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="actions">
+                    <a href="login.html" class="login-button">
+                        <i class="fa-regular fa-user" style="color: #62555f;"></i>Giriş Yap
+                    </a>
+                    <a href="#" class="cart-button">Sepetim
+                        <i class="fa-solid fa-cart-shopping-fast" style="color: #62555f;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <nav>
+
+                <div class="menu">
+                    <ul id="main">
+                      <li><a href="#">Kategoriler</a>
+                            <ul>
+                                <li><a href="roman.html">Roman</a></li>
+                                <li><a href="">Hikaye kitapları</a></li>
+                                <li><a href="">Gezi kitapları</a></li>
+                                <li><a href="">Şiir kitapları</a></li>
+                                <li><a href="">Biyografi kitapları</a></li>
+                                <li><a href=""> Din kitapları</a></li>
+                                <li><a href="">Bilgi kitapları</a></li </ul>
+                        </li>
+                    </ul>
+                    <li><a href="#">Ders Kitapları</a>
+                        <ul>
+                        <li><a href="">Üniversite Kitapları</a></li>
+                        <li><a href="">Lise Ders Kitapları</a></li> 
+                        <li><a href="">Ortaokul Ders Kitapları</a></li>
+                        <li><a href="">Akademik Kitaplar</a></li>
+                        <li><a href="">Bilgisayar Kitapları</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sınav Kitapları</a>
+                        <ul>
+                        <li><a href="">ALES</a></li>
+                        <li><a href="">KPSS</a></li> 
+                        <li><a href="">YDS</a></li>
+                        <li><a href="">DGS</a></li>
+                        <li><a href="">TYT - AYT Konu Anlatım Kitapları</a></li>
+                        <li><a href="">TYT - AYT Soru Bankası Kitapları</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Askıda Kitap</a></li>
+                    <li><a href="takas.html">Takas</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="hftyzr.html">Haftanın Yazarı</a></li>
+                </div>
+            </nav>
+    </header>
+    <!--nav-->
+    <div class="kitaplar">
+    <div class="slidez"><img src="resimler/gece yarısı kütüphanesi.jpg" />
+        <h3>Gece Yarısı Kütüphanesi</h3>
+        <p>Yazar: Matt Haig</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button>
+    </div>
+    <div class="slidez"><img src="resimler/yasamak (1).jpg" />
+        <h3>Yaşamak</h3>
+        <p>Yazar: Yu Hua</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="resimler/veronika ölmek istiyor.jpg" />
+        <h3>Veronika Ölmek İstiyor</h3>
+        <p>Yazar: Paulo Coelho</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="resimler/hayvan çiftliği.jpg" />
+        <h3>Hayvan Çiftliği</h3>
+        <p>Yazar: George Orwell</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="resimler/gizli bahçe.jpg" />
+        <h3>Gizli Bahçe</h3>
+        <p>Yazar:  Frances Hodgson Burnett</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="resimler/sineklerin tanrısı.jpg" />
+        <h3>Sineklerin Tanrısı</h3>
+        <p>Yazar:  William Golding</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="resimler/saatleri ayarlama enstitüsü.jpg" />
+        <h3>Saatleri Ayarlama Enstitüsü</h3>
+        <p>Yazar: Ahmet Hamdi Tanpınar</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="resimler/çatal dil.jpg" />
+         <h3>Çatal Dil</h3>
+        <p>Yazar: William Golding</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="Analiz Proje/bir aşk masalı.jpg" />
+        <h3>Bir Aşk Masalı</h3>
+        <p>Yazar: Ahmet Ümit</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="Analiz Proje/doğu ekspresinde cinayet.jpg" />
+        <h3>Doğu Ekspresinde Cinayet</h3>
+        <p>Yazar: Agatha Christie</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="Analiz Proje/gurur ve önyargı.jpg" />
+        <h3>Gurur ve Önyargı</h3>
+        <p>Yazar:Jane Austen </p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="Analiz Proje/şeker portakalı.jpg" />
+        <h3>Şeker Portakalı</h3>
+        <p>Yazar: Jose Mauro De Vasconcelos</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="Analiz Proje/martin eden.jpg" />
+        <h3>Martin Eden</h3>
+        <p>Yazar: Jack London</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+    <div class="slidez"><img src="Analiz Proje/bilinmeyen bir kadın mektubu.jpg" />
+        <h3>Bilinmeyen Bir Kadının Mektubu</h3>
+        <p>Yazar: Stefan Zweig</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+     <div class="slidez"><img src="Analiz Proje/kırmızı pazartesi.jpg" />
+        <h3>Kırmızı Pazartesi</h3>
+        <p>Yazar: Gabriel García Márquez</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+        <div class="slidez"><img src="Analiz Proje/suç ve ceza.jpg" />
+            <h3>Suç ve Ceza</h3>
+            <p>Yazar: Fyodor Mihayloviç Dostoyevski</p>
+            <p>Fiyat: 15 TL</p>
+            <button type="button" class="btnkitap">Sepete Ekle</button></div>
+     <div class="slidez"><img src="Analiz Proje/kirke.jpg" />
+        <h3>Ben Kirke</h3>
+        <p>Yazar: Madeline Miller</p>
+        <p>Fiyat: 15 TL</p>
+        <button type="button" class="btnkitap">Sepete Ekle</button></div>
+        <div class="slidez"><img src="Analiz Proje/satranç.jpg" />
+            <h3>Satranç</h3>
+            <p>Yazar: Stefan Zweig</p>
+            <p>Fiyat: 15 TL</p></div>
+            <div class="slidez"><img src="Analiz Proje/otomotik portakal.jpg" />
+                <h3>Otomatik Portakal</h3>
+                <p>Yazar: Anthony Burgess </p>
+                <p>Fiyat: 15 TL</p>
+                <button type="button" class="btnkitap">Sepete Ekle</button></div>
+                <div class="slidez"><img src="resimler/tutunamayanlar.jpg" />
+                    <h3>Tutunamayanlar</h3>
+                    <p>Yazar: Oğuz Atay</p>
+                    <p>Fiyat: 15 TL</p>
+                    <button type="button" class="btnkitap">Sepete Ekle</button></div>
+                    
+   </div>
+   <footer>
+    <div class="container">
+
+        <div class="col-md-6">
+            <p>SecondRead, ikinci el kitap satışı yapan bir e-ticaret sitesidir. Amacımız, okuyuculara uygun
+                fiyata kaliteli kitaplar sunmaktır.</p>
+            <p>İletişim: info@secondread.com</p>
+        </div>
+    </div>
+    </div>
+</footer>
+<body>
+    

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Takas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .kitapresmi{
+            height: 400px;
+            margin-left: 200px;
+           margin-top: 20px;
+           margin-bottom: 50px;
+           display: flex;
+           
+        }
+        .profilfoto img{ 
+            margin-left: 20px;
+        clip-path: circle(50% at 50% 50%);
+   
+    }
+        .baslık{
+            margin-left: 50px;
+            text-align: center;
+        }
+       .ozellik{
+        margin-top: 80px;
+        background-color:antiquewhite;
+        border-radius: 5px;
+        color:black;
+        
+
+       }
+       .takas{
+        width: 150px;
+        height: 50px;
+        margin-top: 20px;
+       
+       }
+.slidez{
+    margin-left: 30px;
+}
+.mesaj{
+    width: 120px;
+    height: 50px;
+    margin-top: 100px;
+    background-color: #EA6564;
+    color: #ffff;
+    border-radius: 5px;
+}
+.divider {
+  position: relative;
+  width: 1px;
+  height: 700px; /* Çizginin yüksekliği */
+  background-color: black; /* Çizgi rengi */
+  margin-left: 200px; /* Ortalamak için */
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: black; /* İsteğe bağlı olarak çizginin rengini değiştirebilirsiniz */
+  transform: translateX(-50%);
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+
+            <div class="row">
+                <div class="logo">  <a href="index.html">
+                    <img src="img/logo.png" alt="SecondRead Logo">
+                </a>
+                </div>
+                <div class="arama">
+                    <form>
+                        <input type="text" placeholder="Kitap /Yazar /Yayınevi Ara...">
+                        <button type="submit" class="search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="actions">
+                    <a href="login.html" class="login-button">
+                        <i class="fa-regular fa-user" style="color: #62555f;"></i>Giriş Yap
+                    </a>
+                    <div class="shopping-cart position-relative">
+                        <a href="#" class="cart-button">Sepetim
+                            <i class="fa-solid fa-cart-shopping-fast" style="color: #62555f;"></i>
+                            <span id="item-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2">0</span>
+                        </a>
+                        <div class="shopping-cart-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <nav>
+
+                <div class="menu">
+                    <ul id="main">
+                      <li><a href="#">Kategoriler</a>
+                            <ul>
+                                <li><a href="roman.html">Roman</a></li>
+                                <li><a href="">Hikaye kitapları</a></li>
+                                <li><a href="">Gezi kitapları</a></li>
+                                <li><a href="">Şiir kitapları</a></li>
+                                <li><a href="">Biyografi kitapları</a></li>
+                                <li><a href=""> Din kitapları</a></li>
+                                <li><a href="">Bilgi kitapları</a></li </ul>
+                        </li>
+                    </ul>
+                    <li><a href="#">Ders Kitapları</a>
+                        <ul>
+                        <li><a href="">Üniversite Kitapları</a></li>
+                        <li><a href="">Lise Ders Kitapları</a></li> 
+                        <li><a href="">Ortaokul Ders Kitapları</a></li>
+                        <li><a href="">Akademik Kitaplar</a></li>
+                        <li><a href="">Bilgisayar Kitapları</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sınav Kitapları</a>
+                        <ul>
+                        <li><a href="">ALES</a></li>
+                        <li><a href="">KPSS</a></li> 
+                        <li><a href="">YDS</a></li>
+                        <li><a href="">DGS</a></li>
+                        <li><a href="">TYT - AYT Konu Anlatım Kitapları</a></li>
+                        <li><a href="">TYT - AYT Soru Bankası Kitapları</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Askıda Kitap</a></li>
+                    <li><a href="takas.html">Takas</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="hftyzr.html">Haftanın Yazarı</a></li>
+                </div>
+            </nav>
+            
+        <div class="discerceve1">
+                <div class="profilfoto"> 
+                  <a href="profıle.html">  <img src="img2/profilePhoto.png" alt="Profil Fotoğrafı"></a>
+                  <div class="bio">
+                    <div class="yildiz">
+                        <br>&#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                    <div class="biobaslik">
+                        Selin Kaya 
+                    </div>
+                    <div class="takipliste">
+                        <a href="#"><b> 777 </b> Takipçi</a>
+                        <a href="#"><b> 100 </b> Takip  </a>
+                        <a href="#"><b> 100 </b> İlanlar</a>
+                    </div>
+                </div>
+          </div>
+        </div>
+    </header>
+    <section>
+<div class="kitapresmi">
+    <img src="img/0000000105931-1.jpg" alt="kitap">
+    <div class="baslık">
+        <h3>Harry Potter ve Felsefe Taşı</h3>
+        <h5>Yazar: J. K. Rowling
+           <br> Çevirmen: Ülkü Tamer
+            <br> Yayınevi: Yapı Kredi Yayınları</h5>
+            <div class="ozellik">
+                <h3>Özellikler</h3>
+                <p>
+                    Yayınevi :Yapı Kredi Yayınları
+<br> Hamur Tipi :
+1. Hamur
+<br> Sayfa Sayısı :
+276
+<br> Ebat :
+13,5 x 19,5
+<br> İlk Baskı Yılı :
+2016
+<br> Baskı Sayısı :
+1. Basım
+<br> Dil :
+Türkçe
+                </p>
+
+            </div>
+            <button class="mesaj">Mesaj At</button>
+    </div>
+
+    <div class="divider"></div>
+    <div class="slidez"><img src="img/0000000107298-1.jpg" />
+        <a href="takas.html"><button type="button" class="takas">Takas Et</button></a>
+        <h3>Harry Potter ve Azkaban Tutsağı</h3>
+        <p>Yazar: J.K. Rowling</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    </section>
+
+</body>
+</html>
